@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+
+	<meta charset="utf-8">
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Last.fm / SVG Mashup</title>
+	
+	<link href='http://fonts.googleapis.com/css?family=Copse' rel='stylesheet' type='text/css'>
+
+	<style type="text/css">  
+		
+		* { margin: 0; padding 0; font-family:'Copse', arial, serif; }
+		
+		form { float: right; padding: 6px;}
+		
+		input { 
+			-webkit-border-radius: 6px;
+			-moz-border-radius: 6px;
+			border-radius: 6px;
+			border: 1px solid rgba(255, 0, 0, 0.2); 
+			color: #999; 
+			font-size: 12px; 
+			padding: 4px; 
+			text-shadow: 0 1px 1px #999999;		
+		}
+		
+		input[type="submit"] { background-color: rgba(255, 0, 0, 0.2); }
+		
+		input[type="text"]:focus {	
+			border: 1px solid rgba(255, 0, 0, 0.4);
+			color: #000; 
+		}
+		
+		#chart {     
+			height: 600px;
+			padding: 50px 0 0;
+			text-align: center;
+			vertical-align: middle;
+			width: 960px; 
+   		 }
+   		 
+   		 p { font-size: 10px; padding: 0 0 0 100px; }
+		
+	</style>
+		
+</head>
+
+<body>
+				
+		
+		<form>
+			<input type="text" name="user" id="user" value="r00tdan">
+			<input type="submit" value="GO">
+		</form>
+			
+		
+		<div id="chart"></div>
+		
+		<p>* Click the slices of pie to view more information about the band</p>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+		<script src="js/raphael-min.js"></script>
+		<script src="js/g.raphael-min.js"></script>
+		<script src="js/g.pie-min.js"></script>
+		<script src="js/global.js"></script>	
+		
+</body>
+</html>
