@@ -1,18 +1,21 @@
 <?php
 
-$danny = "r00tdan"; 
-$user = $_GET['username'];
-if(!$user){ $user = $danny; }
+$user = trim($_GET['username']);
 
-$url = "http://ws.audioscrobbler.com/2.0/?method=library.gettracks&api_key=2e12b69187474d8792e177c9a3267b9b&user=" . $user ."&limit=8";
+if(!$user){ $user = "r00tdan"; }
+
+$url = "http://ws.audioscrobbler.com/2.0/?method=library.gettracks&api_key=2e12b69187474d8792e177c9a3267b9b&user=" . $user . "&limit=8";
 $xml = simplexml_load_file($url);
 
 if (!$xml) 
 {
-	echo "Error while fetching the document!";
+	
+	echo "Sorry, I couldn't get any data!";
 	exit;
 	
-} else {
+} 
+	else 
+{
 
 
 	$xml_tracks = $xml->tracks;
